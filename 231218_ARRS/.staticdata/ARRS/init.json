@@ -1,0 +1,79 @@
+{
+    "versions": {
+        "scheme": "1.0",
+        "csbuild": "[v23092716-LOCAL]",
+        "preprocessor": "1.0"
+    },
+    "serverURL": "222.121.76.169",
+    "projectKey": "ARRS",
+    "toolchains": [
+        {
+            "language": "c",
+            "compiler": "Microsoft VisualStudio 2022",
+            "linker": "not-used",
+            "archive": "not-used",
+            "conf": [
+                "cs_define_macro_value=_M_AMD64;100",
+                "cs_define_macro_value=_M_X64;100",
+                "cs_define_macro_value=_WIN64;",
+                "cs_for_init_scope=outer",
+                "cs_using_std=disable",
+                "cs_plain_char=signed",
+                "cs_plain_bit_field=unsigned",
+                "cs_set_type_size=int;4",
+                "cs_set_type_size=float;4",
+                "cs_set_type_size=double;8",
+                "cs_set_type_size=long;4",
+                "cs_set_type_size=pointer;8",
+                "cs_size_t_kind=__int64",
+                "microsoft_version=1935",
+                "",
+                "cs_replace_include_system",
+                "display_error_number"
+            ],
+            "include": [
+                "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.37.32822\\include",
+                "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\atlmfc\\include",
+                "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\VS\\include",
+                "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\VS\\UnitTest\\include",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\cppwinrt",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\winrt",
+                "C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8.1\\Include\\um"
+            ]
+        },
+        {
+            "language": "cpp",
+            "compiler": "Microsoft VisualStudio 2022",
+            "linker": "not-used",
+            "archive": "not-used",
+            "conf": [
+                "cs_define_macro_value=_M_AMD64;100",
+                "cs_define_macro_value=_M_X64;100",
+                "cs_define_macro_value=_WIN64;",
+                "cs_for_init_scope=outer",
+                "cs_using_std=disable",
+                "cs_plain_char=signed",
+                "cs_plain_bit_field=unsigned",
+                "cs_set_type_size=int;4",
+                "cs_set_type_size=float;4",
+                "cs_set_type_size=double;8",
+                "cs_set_type_size=long;4",
+                "cs_set_type_size=pointer;8",
+                "cs_size_t_kind=__int64",
+                "microsoft_version=1935",
+                "",
+                "cs_replace_include_system",
+                "display_error_number"
+            ],
+            "include": [
+                "C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8.1\\Include\\um"
+            ]
+        }
+    ],
+    "exclusions": [
+        "**/.staticdata/preinclude/*"
+    ]
+}

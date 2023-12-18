@@ -1,0 +1,9 @@
+{
+    "capture_setting": {
+        "build_hooking": true,
+        "prebuildCommandEncoding": "euc-kr",
+        "preprocessor": "original"
+    },
+    "last_validation_time": "0",
+    "last_capture_time": "2023-12-18T02:55:27.204Z"
+}

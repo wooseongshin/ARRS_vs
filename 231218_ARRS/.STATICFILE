@@ -1,0 +1,78 @@
+{
+    "REANALYZE": false,
+    "WORKING_DIR": "C:\\dev\\231218_ARRS\\.staticdata",
+    "COMPILER_INSTALLATION_PATH": [
+        "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional"
+    ],
+    "PRE_BUILD_COMMAND": "",
+    "COMMAND": [
+        "msbuild",
+        "ARRS",
+        "/t:Rebuild"
+    ],
+    "STATIC_SERVER_ADDRESS": "222.121.76.169",
+    "PROJECT_KEY": "ARRS",
+    "TOOLCHAIN_FILENAME": "Microsoft_VisualStudio_2022_x64_Host_CCPP.sconf",
+    "PARSING": {
+        "C": {
+            "include": [
+                "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.37.32822\\include",
+                "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\atlmfc\\include",
+                "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\VS\\include",
+                "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\VS\\UnitTest\\include",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\cppwinrt",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\winrt",
+                "C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8.1\\Include\\um"
+            ],
+            "conf": [],
+            "removes": []
+        },
+        "CPP": {
+            "include": [
+                "C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8.1\\Include\\um"
+            ],
+            "conf": [],
+            "removes": []
+        }
+    },
+    "USER_DEFINED_EXTENSIONS": {
+        "header": [
+            ".h",
+            ".H",
+            ".hpp",
+            ".HPP",
+            ".tcc",
+            ".inl",
+            ".INL"
+        ],
+        "source": [
+            ".c",
+            ".C",
+            ".c++",
+            ".C++",
+            ".cpp",
+            ".CPP",
+            ".cxx",
+            ".CXX",
+            ".cc",
+            ".CC",
+            ".cp",
+            ".CP"
+        ],
+        "object": [
+            ".o",
+            ".O",
+            ".lo",
+            ".obj",
+            ".OBJ"
+        ]
+    },
+    "MULTI_PROCESSOR": false,
+    "EXCLUSIONS": [],
+    "EXTRA_OPTIONS": {
+        "SPECIFIED_ANALYSIS_AGENT_VERSION": ""
+    }
+}
