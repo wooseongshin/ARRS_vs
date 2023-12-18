@@ -1,3 +1,4 @@
+
 #include <string.h>
 #include <stdlib.h>
 #include "repository.h"
@@ -20,7 +21,7 @@ void initRepository() {
     getRidesFromFile();
 }
 
-Ticket createTicket(char* userName, time_t usageDate, PassType passType, int magicPassUsageCount) {
+Ticket createTicket(char* userName,time_t usageDate, PassType passType, int magicPassUsageCount) {
     Ticket ticket;
     strcpy(ticket.userName, userName);
     ticket.pinNumber = repository.pinNumber++;
@@ -44,10 +45,10 @@ Ticket* getTicketByPin(int pinNumber) {
     return NULL;
 }
 
-Ride createRide(char* name, int maxRiders, RideStatus status) {
-    Ride ride = { 0, };
+Ride createRide(char* name,int maxRiders, RideStatus status) {
+    Ride ride = {0,};
     if (repository.rideId == DEFAULT_RIDE_COUNT) {
-        printf("���̱ⱸ�� �� �̻� �߰��� �� �����ϴ�. \n");
+        printf("놀이기구를 더 이상 추가할 수 없습니다. \n");
         return ride;
     }
 
@@ -71,7 +72,6 @@ Ride* getRideById(int rideId) {
         }
     }
 
-
     return NULL;
 }
 
@@ -82,13 +82,13 @@ Ride* getAllRides() {
 void saveTicketsToFile(const char* filename, Ticket* tickets, size_t size) {
     FILE* file = fopen(filename, "w");
     if (file == NULL) {
-        perror("���� ���� ����");
+        perror("파일 열기 실패");
         return;
     }
 
     for (size_t i = 1; i <= size; ++i) {
         fprintf(file, "%d %s %lld %d %d\n", tickets[i].pinNumber, tickets[i].userName,
-            tickets[i].usageDate, tickets[i].passType, tickets[i].magicPassUsageCount);
+                tickets[i].usageDate, tickets[i].passType, tickets[i].magicPassUsageCount);
     }
 
     fclose(file);
@@ -97,13 +97,13 @@ void saveTicketsToFile(const char* filename, Ticket* tickets, size_t size) {
 void saveRidesToFile(const char* filename, Ride* rides, size_t size) {
     FILE* file = fopen(filename, "w");
     if (file == NULL) {
-        perror("���� ���� ����");
+        perror("파일 열기 실패");
         return;
     }
 
     for (size_t i = 1; i <= size; ++i) {
         fprintf(file, "%d %s %d %d %d\n", rides[i].id, rides[i].name, rides[i].maxRiders,
-            rides[i].reservedRiders, rides[i].status);
+                rides[i].reservedRiders, rides[i].status);
     }
 
     fclose(file);
@@ -117,14 +117,14 @@ void saveRepositoryToFile() {
 void getTicketsFromFile() {
     FILE* file = fopen("../ticket.txt", "r");
     if (file == NULL) {
-        perror("���� ���� ����");
+        perror("파일 열기 실패");
         return;
     }
 
     while (!feof(file)) {
         Ticket ticket;
         fscanf(file, "%d %s %lld %d %d\n", &ticket.pinNumber, ticket.userName,
-            &ticket.usageDate, &ticket.passType, &ticket.magicPassUsageCount);
+               &ticket.usageDate, &ticket.passType, &ticket.magicPassUsageCount);
         createTicket(ticket.userName, ticket.usageDate, ticket.passType, ticket.magicPassUsageCount);
     }
     fclose(file);
@@ -133,14 +133,14 @@ void getTicketsFromFile() {
 void getRidesFromFile() {
     FILE* file = fopen("../ride.txt", "r");
     if (file == NULL) {
-        perror("���� ���� ����");
+        perror("파일 열기 실패");
         return;
     }
 
     while (!feof(file)) {
         Ride ride;
         fscanf(file, "%d %s %d %d %d\n", &ride.id, ride.name, &ride.maxRiders,
-            &ride.reservedRiders, &ride.status);
+               &ride.reservedRiders, &ride.status);
         createRide(ride.name, ride.maxRiders, ride.status);
     }
 
@@ -150,13 +150,13 @@ void getRidesFromFile() {
 void saveRideToDB(Ride ride) {
     char* query = (char*)malloc(sizeof(char) * 100);
     sprintf(query, "INSERT INTO rides (name, max_riders, reserved_riders, status) VALUES ('%s', %d, %d, %d);",
-        ride.name, ride.maxRiders, ride.reservedRiders, ride.status);
+            ride.name, ride.maxRiders, ride.reservedRiders, ride.status);
 }
 
 void saveTicketToDB(Ticket ticket) {
     char* query = (char*)malloc(sizeof(char) * 100);
     sprintf(query, "INSERT INTO tickets (pin_number, user_name, usage_date, pass_type, magic_pass_usage_count) VALUES (%d, '%s', %lld, %d, %d);",
-        ticket.pinNumber, ticket.userName, ticket.usageDate, ticket.passType, ticket.magicPassUsageCount);
+            ticket.pinNumber, ticket.userName, ticket.usageDate, ticket.passType, ticket.magicPassUsageCount);
 }
 
 

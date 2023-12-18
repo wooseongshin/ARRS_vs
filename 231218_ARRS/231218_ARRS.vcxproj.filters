@@ -38,16 +38,16 @@
     <ClCompile Include="main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Users\sure\CLionProjects\ARRS\src\service.c">
+    <ClCompile Include="controller.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Users\sure\CLionProjects\ARRS\src\repository.c">
+    <ClCompile Include="input_interface.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Users\sure\CLionProjects\ARRS\src\input_interface.c">
+    <ClCompile Include="repository.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Users\sure\CLionProjects\ARRS\src\controller.c">
+    <ClCompile Include="service.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

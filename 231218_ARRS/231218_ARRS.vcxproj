@@ -135,11 +135,11 @@
     <ClInclude Include="types.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Users\sure\CLionProjects\ARRS\src\controller.c" />
-    <ClCompile Include="..\..\Users\sure\CLionProjects\ARRS\src\input_interface.c" />
-    <ClCompile Include="..\..\Users\sure\CLionProjects\ARRS\src\repository.c" />
-    <ClCompile Include="..\..\Users\sure\CLionProjects\ARRS\src\service.c" />
+    <ClCompile Include="controller.c" />
+    <ClCompile Include="input_interface.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="repository.c" />
+    <ClCompile Include="service.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
